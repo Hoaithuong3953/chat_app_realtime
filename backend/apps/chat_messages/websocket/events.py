@@ -1,0 +1,6 @@
+from enum import StrEnum
+
+class ChatEvent(StrEnum):
+    SEND_TEXT_MESSAGE = "SEND_TEXT_MESSAGE"
+    SEND_FILE_MESSAGE = "SEND_FILE_MESSAGE"
+    RECALL_MESSAGE = "RECALL_MESSAGE"

@@ -1,0 +1,92 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
+from uuid import UUID
+from django.db import models
+from django.db.models import Q
+from django.utils import timezone
+
+from apps.chat_messages.enums import MessageType, MessageStatus, SenderType
+from apps.ai_requests.constants import RECENT_MESSAGE_LIMIT
+
+if TYPE_CHECKING:
+    from apps.chat_messages.models import Message
+
+class MessageManager(models.Manager["Message"]):
+    """
+    Manager for Chat Message model
+
+    Provides method for manager chat message
+    """
+    def create_message(
+        self,
+        chat_id: UUID,
+        user_id: UUID,
+        message_type: MessageType,
+        sender_type: SenderType,
+        text_content: str | None,
+        reply_to: UUID | None,
+    ):
+        """Add message to chat"""
+        return self.create(
+            chat_id=chat_id,
+            user_id=user_id,
+            message_type=message_type,
+            sender_type=sender_type,
+            text_content=text_content,
+            reply_to_message_id=reply_to,
+        )
+
+    def get_by_chat_and_id(self, message_id: UUID, chat_id: UUID):
+        """Get a message by chat id and message id"""
+        return self.filter(
+            chat_id=chat_id,
+            id=message_id,
+        ).first()
+
+    def get_chat_history(
+        self,
+        chat_id: UUID,
+        cursor: str | None,
+        limit: int,
+    ):
+        """Get list messages from a chat"""
+        qs = (
+            self.filter(chat_id=chat_id)
+            .select_related(
+                "file_message",
+                "file_message__file_asset",
+            )
+            .order_by("-created_at", "-id")
+        )
+
+        if cursor:
+            qs = qs.filter(
+                Q(created_at__lt=cursor.created_at) | 
+                (Q(created_at=cursor.created_at)&Q(id__lt=cursor.message_id))
+            )
+
+        return list(qs[:limit])
+
+    def recall(self, message: Message):
+        message.status = MessageStatus.RECALLED
+        message.recalled_at = timezone.now()
+        message.save(update_fields=["status", "recalled_at"])
+        return message
+
+    def get_by_id(self, message_id: UUID):
+        """Get a message by message id"""
+        return self.filter(id=message_id).first()
+
+    def get_recent_messages_for_ai_context(
+        self,
+        chat_id: UUID,
+        limit: int = RECENT_MESSAGE_LIMIT,
+    ):
+        return (
+            self.filter(
+                chat_id=chat_id,
+                status=MessageStatus.ACTIVE,
+            )
+            .select_related("user")
+            .order_by("-created_at", "-id")[:limit]
+        )
