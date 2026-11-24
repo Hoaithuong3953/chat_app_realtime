@@ -3,8 +3,6 @@ from typing import TYPE_CHECKING
 from uuid import UUID
 from django.contrib.auth.base_user import BaseUserManager
 from django.db.models import Q
-from django.utils import timezone
-
 
 from apps.accounts.enums import Role
 
