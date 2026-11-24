@@ -1,0 +1,16 @@
+{
+  "messages": {
+    "success": "Success",
+    "error": "An error occurred",
+    "warning": "Warning",
+    "info": "Information",
+    "unknownError": "An unknown error occurred",
+    "tryAgain": "Please try again later"
+  },
+
+  "validation": {
+    "required": "Please enter {{field}}",
+    "min": "{{field}} must be at least {{count}} characters",
+    "max": "{{field}} must not exceed {{count}} characters"
+  }
+}

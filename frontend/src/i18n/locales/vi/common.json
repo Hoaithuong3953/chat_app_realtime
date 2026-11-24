@@ -1,0 +1,15 @@
+{
+  "messages": {
+    "success": "Thành công",
+    "error": "Có lỗi xảy ra",
+    "warning": "Cảnh báo",
+    "info": "Thông tin",
+    "unknownError": "Đã xảy ra lỗi không xác định",
+    "tryAgain": "Vui lòng thử lại sau"
+  },
+  "validation": {
+    "required": "Vui lòng nhập {{field}}",
+    "min": "{{field}} phải có ít nhất {{count}} ký tự",
+    "max": "{{field}} không được vượt quá {{count}} ký tự"
+  }
+}
