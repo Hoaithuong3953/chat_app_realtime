@@ -18,9 +18,11 @@
     "@tanstack/react-virtual": "^3.14.13",
     "axios": "^1.20.0",
     "dayjs": "^1.11.23",
+    "i18next": "^27.1.5",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-hook-form": "^7.89.0",
+    "react-i18next": "^18.0.2",
     "react-router-dom": "^7.18.4",
     "zod": "^4.6.5",
     "zustand": "^5.0.15"
