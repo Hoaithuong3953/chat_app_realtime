@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import type { ApiErrorResponse } from '@/types/api'
+import type { ApiErrorResponse } from '@/types'
 
 export class ApiError extends Error {
   readonly statusCode?: number
