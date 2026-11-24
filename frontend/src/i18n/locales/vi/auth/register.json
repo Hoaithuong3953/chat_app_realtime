@@ -1,0 +1,39 @@
+{
+  "title": "Đăng ký tài khoản",
+  "description": "Tạo tài khoản mới để bắt đầu sử dụng",
+  "submit": "Đăng ký",
+  "success": "Đăng ký tài khoản thành công",
+
+  "fields": {
+    "fullName": "Họ và tên",
+    "username": "Tên đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu"
+  },
+
+  "placeholders": {
+    "fullName": "Nhập họ và tên",
+    "username": "Nhập tên đăng nhập",
+    "email": "Nhập email",
+    "password": "Nhập mật khẩu",
+    "confirmPassword": "Nhập lại mật khẩu"
+  },
+
+  "validation": {
+    "usernameFormat": "Tên đăng nhập không hợp lệ",
+    "email": "Email không hợp lệ",
+    "passwordUppercase": "Mật khẩu phải có ít nhất 1 chữ hoa",
+    "passwordLowercase": "Mật khẩu phải có ít nhất 1 chữ thường",
+    "passwordNumber": "Mật khẩu phải có ít nhất 1 chữ số",
+    "passwordSpecial": "Mật khẩu phải có ít nhất 1 ký tự đặc biệt",
+    "passwordMismatch": "Mật khẩu xác nhận không khớp"
+  },
+
+  "errors": {
+    "EMAIL_ALREADY_EXISTS": "Email đã được sử dụng",
+    "USERNAME_ALREADY_EXISTS": "Tên đăng nhập đã tồn tại",
+    "VALIDATION_ERROR": "Dữ liệu gửi lên không hợp lệ",
+    "UNKNOWN_ERROR": "Đăng ký thất bại. Vui lòng thử lại"
+  }
+}

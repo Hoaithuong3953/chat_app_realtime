@@ -1,0 +1,39 @@
+{
+  "title": "Create an account",
+  "description": "Create a new account to get started",
+  "submit": "Register",
+  "success": "Registration successful",
+
+  "fields": {
+    "fullName": "Full name",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password"
+  },
+
+  "placeholders": {
+    "fullName": "Enter your full name",
+    "username": "Enter your username",
+    "email": "Enter your email",
+    "password": "Enter your password",
+    "confirmPassword": "Re-enter your password"
+  },
+
+  "validation": {
+    "usernameFormat": "Username must start with a letter and contain only letters, numbers, dots, underscores, or hyphens",
+    "email": "Invalid email address",
+    "passwordUppercase": "Password must contain at least one uppercase letter",
+    "passwordLowercase": "Password must contain at least one lowercase letter",
+    "passwordNumber": "Password must contain at least one number",
+    "passwordSpecial": "Password must contain at least one special character",
+    "passwordMismatch": "Passwords do not match"
+  },
+
+  "errors": {
+    "EMAIL_ALREADY_EXISTS": "This email address is already in use",
+    "USERNAME_ALREADY_EXISTS": "This username is already taken",
+    "VALIDATION_ERROR": "The submitted data is invalid",
+    "UNKNOWN_ERROR": "Registration failed. Please try again"
+  }
+}
