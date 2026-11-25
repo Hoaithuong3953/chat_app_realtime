@@ -1,0 +1,21 @@
+{
+  "title": "Đăng nhập",
+  "description": "Đăng nhập vào tài khoản của bạn",
+  "submit": "Đăng nhập",
+  "success": "Đăng nhập thành công",
+
+  "fields": {
+    "identifier": "Email hoặc tên đăng nhập",
+    "password": "Mật khẩu"
+  },
+
+  "placeholders": {
+    "identifier": "Nhập email hoặc tên đăng nhập",
+    "password": "Nhập mật khẩu"
+  },
+
+  "errors": {
+    "INVALID_CREDENTIALS": "Email/tên đăng nhập hoặc mật khẩu không chính xác",
+    "ACCOUNT_DISABLED": "Tài khoản của bạn đã bị vô hiệu hóa. Vui lòng liên hệ bộ phận hỗ trợ để được trợ giúp"
+  }
+}

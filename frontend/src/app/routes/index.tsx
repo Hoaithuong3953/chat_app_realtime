@@ -1,7 +1,7 @@
 import {createBrowserRouter} from 'react-router-dom'
 
 import {AuthLayout} from '@/layouts'
-import { RegisterPage } from '@/features/auth/pages'
+import { LoginPage, RegisterPage } from '@/features/auth/pages'
 import {PATHS} from './paths'
 
 export const router = createBrowserRouter([
@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
         path: PATHS.AUTH.REGISTER,
         element: <RegisterPage />
       },
+      {
+        path: PATHS.AUTH.LOGIN,
+        element: <LoginPage />
+      }
     ],
   },
 ])
