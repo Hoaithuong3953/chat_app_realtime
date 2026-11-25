@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 export function useRegister() {
   const {t} = useTranslation('auth/register')
+  const {t: tCommon} = useTranslation('common')
 
   return useMutation<RegisterResponseDto, ApiError, RegisterFormValues>({
     mutationFn: registerService,
@@ -19,7 +20,7 @@ export function useRegister() {
     onError(error) {
       notify.error({
         message: t(`errors.${error.errorCode}`, {
-          defaultValue: t('errors.UNKNOWN_ERROR')
+          defaultValue: tCommon('errors.UNKNOWN_ERROR')
         })
       })
     },

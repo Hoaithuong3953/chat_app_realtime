@@ -32,8 +32,6 @@
 
   "errors": {
     "EMAIL_ALREADY_EXISTS": "This email address is already in use",
-    "USERNAME_ALREADY_EXISTS": "This username is already taken",
-    "VALIDATION_ERROR": "The submitted data is invalid",
-    "UNKNOWN_ERROR": "Registration failed. Please try again"
+    "USERNAME_ALREADY_EXISTS": "This username is already taken"
   }
 }

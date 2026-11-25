@@ -11,5 +11,9 @@
     "required": "Vui lòng nhập {{field}}",
     "min": "{{field}} phải có ít nhất {{count}} ký tự",
     "max": "{{field}} không được vượt quá {{count}} ký tự"
+  },
+  "errors": {
+    "VALIDATION_ERROR": "Dữ liệu gửi đi không hợp lệ",
+    "UNKNOWN_ERROR": "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau"
   }
 }

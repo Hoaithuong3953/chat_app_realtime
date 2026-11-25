@@ -12,5 +12,9 @@
     "required": "Please enter {{field}}",
     "min": "{{field}} must be at least {{count}} characters",
     "max": "{{field}} must not exceed {{count}} characters"
+  },
+  "errors": {
+    "VALIDATION_ERROR": "The submitted data is invalid",
+    "UNKNOWN_ERROR": "An unknown error occurred. Please try again later"
   }
 }
